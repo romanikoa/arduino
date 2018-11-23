@@ -115,11 +115,6 @@ public boolean keep;
         mServiceLooper = thread.getLooper();
         mServiceHandler = new ServiceHandler(mServiceLooper);
     }
-/*public void phoneCall(){
-    Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:8951-785-37-19"));
-    startActivity(call);
-
-}*/
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         //int NOTIFICATION_ID = (int) (System.currentTimeMillis()%10000);

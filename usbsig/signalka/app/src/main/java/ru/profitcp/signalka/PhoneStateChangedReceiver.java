@@ -40,7 +40,7 @@ public class PhoneStateChangedReceiver extends BroadcastReceiver {
             Intent intent1 = new Intent(MainActivity.PHONE_CALL);
                     context1.sendBroadcast(intent1);
                    // String phoneNumber = incomingNumber;
-            if (log.phoneNumber.equals("+79517853719")) {
+            if (log.phoneNumber.equals("+7123123123")) {
                     Intent intent2 = new Intent(context, MyIntentBuilder.class);
                     intent2.putExtra("doopen",true);
                     context.startService(intent2);
