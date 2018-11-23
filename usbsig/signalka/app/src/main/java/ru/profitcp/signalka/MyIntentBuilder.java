@@ -1,6 +1,6 @@
 package ru.profitcp.signalka;
 
-import android.app.Notification;
+//import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
@@ -16,7 +16,7 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.Process;
-import android.support.v4.app.NotificationCompat;
+//import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 import com.felhr.usbserial.UsbSerialDevice;
@@ -41,11 +41,11 @@ public class MyIntentBuilder extends Service {
     //public static final String ACTION_USB_ATTACHED = "android.hardware.usb.action.USB_DEVICE_ATTACHED";
     //ublic static final String ACTION_USB_DETACHED = "android.hardware.usb.action.USB_DEVICE_DETACHED";
 public boolean keep;
-    public static final String ACTION_USB_NOT_SUPPORTED = "com.felhr.usbservice.USB_NOT_SUPPORTED";
-    public static final String ACTION_NO_USB = "ru.profitcp.signalka.NO_USB";
-    public static final String ACTION_USB_PERMISSION_GRANTED = "ru.profitcp.signalka.USB_PERMISSION_GRANTED";
-    public static final String ACTION_USB_PERMISSION_NOT_GRANTED = "ru.profitcp.signalka.USB_PERMISSION_NOT_GRANTED";
-    public static final String ACTION_USB_DISCONNECTED = "ru.profitcp.signalka.USB_DISCONNECTED";
+ //   public static final String ACTION_USB_NOT_SUPPORTED = "com.felhr.usbservice.USB_NOT_SUPPORTED";
+   // public static final String ACTION_NO_USB = "ru.profitcp.signalka.NO_USB";
+  //  public static final String ACTION_USB_PERMISSION_GRANTED = "ru.profitcp.signalka.USB_PERMISSION_GRANTED";
+   // public static final String ACTION_USB_PERMISSION_NOT_GRANTED = "ru.profitcp.signalka.USB_PERMISSION_NOT_GRANTED";
+   // public static final String ACTION_USB_DISCONNECTED = "ru.profitcp.signalka.USB_DISCONNECTED";
     private static final String ACTION_USB_PERMISSION = "ru.profitcp.signalka.USB_PERMISSION";
     //public static final String ACTION_CDC_DRIVER_NOT_WORKING = "com.felhr.connectivityservices.ACTION_CDC_DRIVER_NOT_WORKING";
     //public static final String ACTION_USB_DEVICE_NOT_WORKING = "com.felhr.connectivityservices.ACTION_USB_DEVICE_NOT_WORKING";
@@ -115,11 +115,6 @@ public boolean keep;
         mServiceLooper = thread.getLooper();
         mServiceHandler = new ServiceHandler(mServiceLooper);
     }
-public void phoneCall(){
-    Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:---"));
-    startActivity(call);
-
-}
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         //int NOTIFICATION_ID = (int) (System.currentTimeMillis()%10000);
@@ -201,7 +196,7 @@ public void phoneCall(){
                                     serialPort.setStopBits(UsbSerialInterface.STOP_BITS_1);
                                     serialPort.setParity(UsbSerialInterface.PARITY_NONE);
                                     serialPort.setFlowControl(UsbSerialInterface.FLOW_CONTROL_OFF);
-                                    serialPort.read(mCallback);
+                                    //serialPort.read(mCallback);
                                     keep=true;
                                 }
 

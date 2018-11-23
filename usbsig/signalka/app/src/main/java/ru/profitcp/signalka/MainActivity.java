@@ -180,10 +180,10 @@ textView.setText(log.data);
         stopService(new Intent(this, MyIntentBuilder.class));
 
     }
-    public void onDestroy(Intent intent){
+  /*  public void onDestroy(Intent intent){
         super.onDestroy();
         stopService(intent);
-    }
+    }*/
 
 
 }
