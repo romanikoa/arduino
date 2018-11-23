@@ -116,7 +116,7 @@ public boolean keep;
         mServiceHandler = new ServiceHandler(mServiceLooper);
     }
 public void phoneCall(){
-    Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:8951-785-37-19"));
+    Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:---"));
     startActivity(call);
 
 }
