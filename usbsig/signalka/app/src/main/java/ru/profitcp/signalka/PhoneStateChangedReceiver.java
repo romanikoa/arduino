@@ -51,7 +51,7 @@ public class PhoneStateChangedReceiver extends BroadcastReceiver {
 
         }
     }
-    public static void answerPhoneHeadsethook(Context context) {
+ /*   public static void answerPhoneHeadsethook(Context context) {
         // «Нажимаем» и «отпускаем» кнопку на гарнитуре
         Intent buttonDown = new Intent(Intent.ACTION_MEDIA_BUTTON);
         buttonDown.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_HEADSETHOOK));
@@ -60,14 +60,14 @@ public class PhoneStateChangedReceiver extends BroadcastReceiver {
         Intent buttonUp = new Intent(Intent.ACTION_MEDIA_BUTTON);
         buttonUp.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_HEADSETHOOK));
         context.sendOrderedBroadcast(buttonUp, "android.permission.CALL_PRIVILEGED");
-    }
+    }*/
     public Thread getThreadByName(String threadName) {
         for (Thread t : Thread.getAllStackTraces().keySet()) {
             if (t.getName().equals(threadName)) return t;
         }
         return null;
     }
-    public void phoneEnd(Context context){
+  /*  public void phoneEnd(Context context){
         Thread gt = getThreadByName("SUPER");
         try {
             gt.join();
@@ -85,6 +85,6 @@ public class PhoneStateChangedReceiver extends BroadcastReceiver {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }
